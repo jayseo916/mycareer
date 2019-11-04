@@ -146,8 +146,8 @@
             <img class="img-fluid" src="img/portfolio/duckhoogosa_thumbnail2.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <a href='http://duckhoo.site'><h4>Duckhoogosa(Link)</h4></a>
-            <p class="text-muted">Front & Back</p>
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1"><h4>Duckhoogosa<br>(상세페이지 보기)</h4></a>
+            <p class="text-muted">Front & Back 담당</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -160,8 +160,8 @@
             <img class="img-fluid" src="img/portfolio/web_thumbnail2.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>WebPaper</h4>
-            <p class="text-muted">Back</p>
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2"><h4>WebPaper<br>(상세페이지 보기)</h4></a>
+            <p class="text-muted">Back 전체 담당</p>
           </div>
         </div>
         
@@ -255,27 +255,59 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Duckhoogosa</h2>
                 <p class="item-intro text-muted">사용자들이 원하는 문제를 만들고 풀 수 있는 웹사이트</p>
-                <p>Client React, 서버는 flask의 Rest api를 주로 담당하여 개발했습니다.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/DuckhooGosa-Architech.jpg" alt="">
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_main.png" alt="">
-                <p>웹사이트의 메인페이지</p>
-                <p>-메인,장르별, 단어 검색 결과에 대한 무한스크롤을 구현하여 빠른 로딩이 가능하도록 했습니다. <br>
-                -필요한 양의 데이터만 가지고 오도록 하였고, 데이터가 존재하지 않으면 더이상 api를 요청하지 않도록 하여<br> 불필요한 트래픽이 발생하지 않습니다</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_create.png" alt="">
-                <p>-유저가 문제에 사용할 파일을 업로드 하는 등 원하는 형태로 문제를 제작할 수 있는 컴포넌트를 제작했습니다.<br>-파일은 전체 문제제작 완료후 제출시 S3로 올라갑니다. <br>-실시간으로 달라지는 문제 입력폼 종류에 따라 validation 기능이 있습니다.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_solving.png" alt="">
-                <p>-유저가 문제를 풀 수 있는 컴포넌트를 제작했습니다.<br> -유저가 제출한 정답은 서버에서 DB에 저장된 정답지와 비교하여 채점을 합니다.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_score.png" alt="">
-                <p>-채점한 결과를 보여주는 페이지를 제작했습니다. <br>-전체 유저들의 정답률과 본인의 푼 문제의 정답여부를 확인할 수 있습니다.</p>
-                <li>이 외에도 댓글기능 유저별 프로필기능 등 여러 기능이 있습니다.<br></li>
-               <a href='https://github.com/jayseo916/DuckhooGosa-server-jys'>Github(Server)</a>
-               <a href='https://github.com/jayseo916/DuckhooGosa-client-jys.'>Github(Client)</a>
+                <p>Client에선 Component를, Server에선 flask를 사용한 REST api를 주로 담당, 개발했습니다.</p>
+                <a href='https://github.com/jayseo916/DuckhooGosa-server-jys'>Github(Server)</a>
+                <a href='https://github.com/jayseo916/DuckhooGosa-client-jys.'>Github(Client)</a>
                 <ul class="list-inline">
                   <li>Date: 2019.09~10</li>
                   <li>Client: React</li>
                   <li>Server: Python, Flask, MongoDB</li>
                   <li>Deploy: AWS </li>
                 </ul>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/DuckhooGosa-Architech.jpg" alt="">
+                <div class='row mr-2'>
+                  <div class='col-sm-5'>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_main.png" alt=""> 
+                  </div>
+                  <div class='col-sm-6'>
+                    <p class='mt-5'>메인페이지</p>
+                    <p>-메인,장르별, 단어 검색 결과에 대한 무한스크롤을 구현하여 빠른 로딩이 가능하도록 했습니다.</p>
+                    <p>-필요한 양의 데이터만 가지고 올수 있게 했습니다.</p>
+                    <p>-스크롤시 데이터가 더 이상 존재하지 않으면 api를 요청하지 않도록 하여 불필요한 트래픽이 발생하지 않습니다</p>
+                  </div>
+                </div>
+                <div class='row mr-2'>
+                  <div class='col-sm-5'>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_create.png" alt="">
+                  </div>
+                  <div class='col-sm-6'>
+                    <p class='mt-5'>문제 제작 페이지</p>
+                    <p>-유저가 문제에 사용할 파일을 업로드 하는 등 <br> 원하는 형태로 문제를 제작할 수 있는 컴포넌트를 <br>제작했습니다.</p>
+                    <p>-업로드 파일은 전체 문제제작 완료 후 <br>제출버튼 클릭시 S3로 업로드 됩니다. </p>
+                    <p>-실시간으로 달라지는 문제 입력폼 종류에 따른 <br>validation 기능이 있습니다.</p>
+                  </div>
+                </div>
+                <div class='row mr-2'>
+                  <div class='col-sm-5'>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_solving.png" alt="">
+                  </div>
+                  <div class='col-sm-6'>
+                    <p class='mt-5'>문제 풀이 페이지</p>
+                    <p>-유저가 문제를 풀 수 있는 페이지를 제작했습니다.</p>
+                    <p>-유저가 제출한 답은 서버에서 DB에 저장된 정답과 비교하여 채점을 합니다.</p>
+                  </div>
+                </div>
+                <div class='row mr-2'>
+                  <div class='col-sm-5'>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/duckhoo_score.png" alt="">
+                  </div>
+                  <div class='col-sm-6'>
+                    <p class='mt-5'>점수 확인 페이지</p>
+                    <p>-채점한 결과를 보여주는 페이지를 제작했습니다. </p>
+                    <p>-전체 유저들의 정답률과 본인이 풀어본 문제의<br> 정답여부를 확인할 수 있습니다.</p>
+                  </div>
+                </div>
+                <li>이 외에도 댓글기능 유저별 프로필기능 등 여러 기능이 있습니다.<br></li>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -302,12 +334,8 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">WebPaper</h2>
-                <p class="item-intro text-muted"></p>
-                <p>-Back을 담당하여 Node.js express와 mongoDB로 서버 구축 </p>
-                <p>-Bing api를 사용하여 카테고리 기사, 연관기사 제공하는 api 제작 </p> 
-                <p>-북마크,댓글 기능 api 제작</p>
-                <p>-JWT를 사용하여 유저 인증 기능 구현</p>
-                <p>-유저 권한에 따른 api 이용제한 기능 구현</p>
+                <p class="item-intro text-muted">Bing news api를 사용하여 기사를 끌어오고<br> 사이트 이용자들의 조회수를 분석하여 대표 기사를 선정하고 관련기사들을 보여주는 사이트</p>
+                <p>Back전체를 담당하였고 Node.js, express와 mongoDB로 Server를 구축했습니다. </p>
                 <a href='https://github.com/jayseo916/WebPaper-server-jys/tree/deploy'>Github(Server)</a>
                 <a href='https://github.com/jayseo916/WebPaper-client-jys'>Github(Client)</a>
                 <ul class="list-inline">
@@ -315,6 +343,12 @@
                   <li>Client: React</li>
                   <li>Server: Node.js, MongoDB</li>
                 </ul>
+                <p class="item-intro text-muted"></p>
+                <p>-Bing api를 사용하여 카테고리 기사, 연관기사 제공하는 api 제작 </p> 
+                <p>-북마크,댓글 기능 api 제작</p>
+                <p>-JWT를 사용하여 유저 인증 기능 구현</p>
+                <p>-유저 권한에 따른 api 이용제한 기능 구현</p>
+                
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
